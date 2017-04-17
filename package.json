@@ -1,0 +1,52 @@
+{
+  "name": "stylelint-config-tidy",
+  "version": "0.0.0",
+  "description": "Stylelint shareable config for Tidy style.",
+  "homepage": "https://github.com/sholladay/stylelint-config-tidy",
+  "main": "index.js",
+  "author": {
+    "name": "Seth Holladay",
+    "url": "http://seth-holladay.com",
+    "email": "me@seth-holladay.com"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sholladay/stylelint-config-tidy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sholladay/stylelint-config-tidy/issues",
+    "email": "me@seth-holladay.com"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "license": "MPL-2.0",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "stylelint-order": "^0.4.3"
+  },
+  "devDependencies": {
+    "ava": "^0.18.1",
+    "eslint-config-tidy": "^0.4.0",
+    "stylelint": "^7.10.1",
+    "xo": "^0.18.0"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "clean",
+    "lint",
+    "tidy",
+    "css",
+    "stylesheet",
+    "style"
+  ],
+  "xo": {
+    "extend": "tidy"
+  }
+}
