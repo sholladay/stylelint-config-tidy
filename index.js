@@ -20,7 +20,7 @@ module.exports = {
         'block-closing-brace-empty-line-before' : 'never',
         'block-closing-brace-newline-after'     : 'always',
         'block-closing-brace-newline-before'    : 'always',
-        'block-closing-brace-space-after'       : 'always',
+        'block-closing-brace-space-after'       : 'always-single-line',
         'block-closing-brace-space-before'      : 'always-single-line',
         'block-no-empty'                        : true,
         'block-opening-brace-newline-after'     : 'always',
@@ -51,7 +51,8 @@ module.exports = {
         'declaration-block-trailing-semicolon'               : 'always',
         'declaration-colon-newline-after'                    : 'always-multi-line',
         'declaration-colon-space-after'                      : 'always',
-        'declaration-colon-space-before'                     : 'always',
+        // Disabled for now because it does not allow for aligning colons (enforces a single space).
+        // 'declaration-colon-space-before'                     : 'always',
         'declaration-empty-line-before'                      : 'never',
         'font-family-name-quotes'                            : 'always-unless-keyword',
         'font-family-no-duplicate-names'                     : true,
@@ -103,8 +104,7 @@ module.exports = {
         'property-case'                                      : 'lower',
         'property-no-unknown'                                : true,
         'property-no-vendor-prefix'                          : true,
-        'rule-empty-line-before'                             : ['always-multi-line', {
-            except : ['first-nested'],
+        'rule-empty-line-before'                             : ['never', {
             ignore : ['after-comment']
         }],
         'selector-attribute-brackets-space-inside'       : 'never',
@@ -121,7 +121,7 @@ module.exports = {
         'selector-max-compound-selectors'                : 4,
         'selector-max-empty-lines'                       : 0,
         // TODO: This rule seems like a great idea, but not sure what a good value for it is.
-        'selector-max-specificity'                       : '0,2,0',
+        'selector-max-specificity'                       : '1,1,0',
         'selector-no-vendor-prefix'                      : true,
         'selector-pseudo-class-case'                     : 'lower',
         'selector-pseudo-class-no-unknown'               : true,
@@ -134,7 +134,7 @@ module.exports = {
         'shorthand-property-no-redundant-values'         : true,
         'string-no-newline'                              : true,
         'string-quotes'                                  : 'single',
-        'time-min-milliseconds'                          : 300,
+        'time-min-milliseconds'                          : 200,
         'unit-case'                                      : 'lower',
         'unit-no-unknown'                                : true,
         'value-keyword-case'                             : 'lower',
