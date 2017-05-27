@@ -56,7 +56,7 @@ module.exports = {
         'declaration-empty-line-before'                      : 'never',
         'font-family-name-quotes'                            : 'always-unless-keyword',
         'font-family-no-duplicate-names'                     : true,
-        'font-weight-notation'                               : 'named-where-possible',
+        'font-weight-notation'                               : 'numeric',
         'function-calc-no-unspaced-operator'                 : true,
         'function-comma-newline-after'                       : 'always-multi-line',
         'function-comma-newline-before'                      : 'never-multi-line',
