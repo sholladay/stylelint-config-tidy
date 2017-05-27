@@ -28,7 +28,7 @@ module.exports = {
         'block-opening-brace-space-before'      : 'always',
         'color-hex-case'                        : 'upper',
         'color-hex-length'                      : 'short',
-        'color-named'                           : 'always-where-possible',
+        'color-named'                           : 'never',
         'color-no-invalid-hex'                  : true,
         'comment-empty-line-before'             : ['always', {
             except : ['first-nested'],
