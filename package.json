@@ -1,53 +1,56 @@
 {
-  "name": "stylelint-config-tidy",
-  "version": "0.4.0",
-  "description": "Stylelint shareable config for Tidy style.",
-  "homepage": "https://github.com/sholladay/stylelint-config-tidy",
-  "main": "index.js",
-  "author": {
-    "name": "Seth Holladay",
-    "url": "http://seth-holladay.com",
-    "email": "me@seth-holladay.com"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:sholladay/stylelint-config-tidy.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sholladay/stylelint-config-tidy/issues",
-    "email": "me@seth-holladay.com"
-  },
-  "engines": {
-    "node": ">=6"
-  },
-  "license": "MPL-2.0",
-  "files": [
-    "index.js"
-  ],
-  "dependencies": {
-    "stylelint-config-recommended": "^1.0.0",
-    "stylelint-order": "^0.6.0"
-  },
-  "devDependencies": {
-    "ava": "^0.22.0",
-    "eslint-config-tidy": "^0.5.0",
-    "stylelint": "^8.1.1",
-    "xo": "^0.18.0"
-  },
-  "keywords": [
-    "stylelint",
-    "stylelint-config",
-    "clean",
-    "lint",
-    "tidy",
-    "css",
-    "stylesheet",
-    "style"
-  ],
-  "xo": {
-    "extend": "tidy"
-  }
+    "name": "stylelint-config-tidy",
+    "version": "0.4.0",
+    "description": "Stylelint shareable config for Tidy style",
+    "homepage": "https://github.com/sholladay/stylelint-config-tidy",
+    "main": "index.js",
+    "author": {
+        "name": "Seth Holladay",
+        "url": "https://seth-holladay.com",
+        "email": "me@seth-holladay.com"
+    },
+    "scripts": {
+        "test": "xo && ava"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:sholladay/stylelint-config-tidy.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sholladay/stylelint-config-tidy/issues",
+        "email": "me@seth-holladay.com"
+    },
+    "engines": {
+        "node": ">=6"
+    },
+    "license": "MPL-2.0",
+    "files": [
+        "index.js"
+    ],
+    "dependencies": {
+        "stylelint-config-recommended": "^1.0.0",
+        "stylelint-order": "^0.6.0"
+    },
+    "devDependencies": {
+        "ava": "^0.22.0",
+        "eslint-config-tidy": "^0.5.0",
+        "stylelint": "^8.1.1",
+        "xo": "^0.18.0"
+    },
+    "keywords": [
+        "stylelint",
+        "stylelint-config",
+        "clean",
+        "lint",
+        "tidy",
+        "css",
+        "stylesheet",
+        "style",
+        "quality",
+        "check",
+        "errors"
+    ],
+    "xo": {
+        "extend": "tidy"
+    }
 }
