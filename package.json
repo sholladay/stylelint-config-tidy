@@ -28,12 +28,13 @@
     "index.js"
   ],
   "dependencies": {
-    "stylelint-order": "^0.4.3"
+    "stylelint-config-recommended": "^1.0.0",
+    "stylelint-order": "^0.6.0"
   },
   "devDependencies": {
-    "ava": "^0.18.1",
-    "eslint-config-tidy": "^0.4.0",
-    "stylelint": "^7.10.1",
+    "ava": "^0.22.0",
+    "eslint-config-tidy": "^0.5.0",
+    "stylelint": "^8.1.1",
     "xo": "^0.18.0"
   },
   "keywords": [

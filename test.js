@@ -3,56 +3,50 @@ import test from 'ava';
 import stylelint from 'stylelint';
 import tidy from '.';
 
-const sheetPath = {
-    good : path.resolve(__dirname, 'fixture', 'good.css'),
-    bad  : path.resolve(__dirname, 'fixture', 'bad.css')
+const goodSheet = path.resolve(__dirname, 'fixture', 'good.css');
+const badSheet = path.resolve(__dirname, 'fixture', 'bad.css');
+
+const lintFile = (filePath) => {
+    return stylelint.lint({
+        config : tidy,
+        files  : filePath
+    });
 };
 
-const ruleErrors = (violations, ruleId) => {
-    return violations.filter((x) => {
+const lintText = (text) => {
+    return stylelint.lint({
+        config : tidy,
+        code   : text
+    });
+};
+
+const getErrors = (results, ruleId) => {
+    return results[0].warnings.filter((x) => {
         return x.rule === ruleId && x.severity === 'error';
     });
 };
 
 test('minimum necessary to pass', async (t) => {
-    const result = await stylelint.lint({
-        config : tidy,
-        code   : 'p {\n    color: inherit;\n}\n'
-    });
-    t.false(result.errored);
+    const { errored } = await lintText('p {\n    color: inherit;\n}\n');
+    t.false(errored);
 });
 
 test('good stylesheet', async (t) => {
-    const result = await stylelint.lint({
-        config : tidy,
-        files  : sheetPath.good
-    });
-    t.false(result.errored);
+    const { errored } = await lintFile(goodSheet);
+    t.false(errored);
 });
 
 test('bad stylesheet', async (t) => {
-    const result = await stylelint.lint({
-        config : tidy,
-        files  : sheetPath.bad
-    });
-    t.true(result.errored);
+    const { errored } = await lintFile(badSheet);
+    t.true(errored);
 });
 
 test('word blacklist is case insensitive', async (t) => {
-    const { errored, results } = await stylelint.lint({
-        config : tidy,
-        code   : '/* TODO: */\n/* todo: */\n'
-    });
+    const { errored, results } = await lintText('/* TODO: */\n/* todo: */\n');
 
     t.true(errored);
 
-    const errors = ruleErrors(results[0].warnings, 'comment-word-blacklist');
+    const errors = getErrors(results, 'comment-word-blacklist');
 
     t.is(errors.length, 2);
-    t.true(errors.some((x) => {
-        return x.text.includes('TODO');
-    }));
-    t.true(errors.some((x) => {
-        return x.text.includes('todo');
-    }));
 });

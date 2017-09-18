@@ -6,7 +6,8 @@ module.exports = {
     plugins : [
         'stylelint-order'
     ],
-    rules : {
+    extends : 'stylelint-config-recommended',
+    rules   : {
         'at-rule-empty-line-before' : ['always', {
             except : ['blockless-after-same-name-blockless', 'first-nested'],
             ignore : ['after-comment']
@@ -36,7 +37,7 @@ module.exports = {
         }],
         'comment-no-empty'                                   : true,
         'comment-whitespace-inside'                          : 'always',
-        'comment-word-blacklist'                             : ['/^TODO:/', '/^todo:/'],
+        'comment-word-blacklist'                             : ['/^TODO:/i'],
         'custom-property-empty-line-before'                  : 'never',
         'declaration-bang-space-after'                       : 'never',
         'declaration-bang-space-before'                      : 'always',
