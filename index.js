@@ -36,7 +36,7 @@ module.exports = {
         }],
         'comment-no-empty'                                   : true,
         'comment-whitespace-inside'                          : 'always',
-        'comment-word-blacklist'                             : ['/^TODO:/'],
+        'comment-word-blacklist'                             : ['/^TODO:/', '/^todo:/'],
         'custom-property-empty-line-before'                  : 'never',
         'declaration-bang-space-after'                       : 'never',
         'declaration-bang-space-before'                      : 'always',

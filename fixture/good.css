@@ -1,6 +1,7 @@
 /* Stylelint configured with Tidy should consider this an acceptable stylesheet. */
 
 div {
+    /* skippity to do da */
     color : hsl(240, 100%, 50%);
     font-weight : 700;
     top : 0;
