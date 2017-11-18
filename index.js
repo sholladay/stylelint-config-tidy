@@ -6,7 +6,7 @@ module.exports = {
     plugins : [
         'stylelint-order'
     ],
-    extends : 'stylelint-config-recommended',
+    extends : 'stylelint-config-xo',
     rules   : {
         'at-rule-empty-line-before' : ['always', {
             except : ['blockless-after-same-name-blockless', 'first-nested'],

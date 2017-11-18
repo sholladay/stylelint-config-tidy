@@ -27,12 +27,16 @@
     "files": [
         "index.js"
     ],
+    "peerDependencies": {
+        "stylelint": ">=8"
+    },
     "dependencies": {
         "stylelint-config-recommended": "^1.0.0",
-        "stylelint-order": "^0.6.0"
+        "stylelint-config-xo": "^0.2.0",
+        "stylelint-order": "^0.7.0"
     },
     "devDependencies": {
-        "ava": "^0.22.0",
+        "ava": "^0.23.0",
         "eslint-config-tidy": "^0.5.0",
         "stylelint": "^8.1.1",
         "xo": "^0.18.0"
