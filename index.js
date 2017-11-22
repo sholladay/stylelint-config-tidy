@@ -6,7 +6,10 @@ module.exports = {
     plugins : [
         'stylelint-order'
     ],
-    extends : 'stylelint-config-xo',
+    extends : [
+        'stylelint-config-recommended',
+        'stylelint-config-xo'
+    ],
     rules   : {
         'at-rule-empty-line-before' : ['always', {
             except : ['blockless-after-same-name-blockless', 'first-nested'],
@@ -52,12 +55,14 @@ module.exports = {
         'declaration-block-trailing-semicolon'               : 'always',
         'declaration-colon-newline-after'                    : 'always-multi-line',
         'declaration-colon-space-after'                      : 'always',
-        // Disabled for now because it does not allow for aligning colons (enforces a single space).
-        // 'declaration-colon-space-before'                     : 'always',
+        // Disabled because 'always' does not support aligning colons (enforces a single space).
+        'declaration-colon-space-before'                     : null,
         'declaration-empty-line-before'                      : 'never',
         'font-family-name-quotes'                            : 'always-unless-keyword',
         'font-family-no-duplicate-names'                     : true,
-        'font-weight-notation'                               : 'numeric',
+        'font-weight-notation'                               : ['numeric', {
+            ignore : ['relative']
+        }],
         'function-calc-no-unspaced-operator'                 : true,
         'function-comma-newline-after'                       : 'always-multi-line',
         'function-comma-newline-before'                      : 'never-multi-line',
@@ -102,6 +107,8 @@ module.exports = {
         'number-leading-zero'                                : 'always',
         'number-no-trailing-zeros'                           : true,
         'order/properties-alphabetical-order'                : true,
+        // Disabled because we use alphabetical order instead.
+        'order/properties-order'                             : null,
         'property-case'                                      : 'lower',
         'property-no-unknown'                                : true,
         'property-no-vendor-prefix'                          : true,

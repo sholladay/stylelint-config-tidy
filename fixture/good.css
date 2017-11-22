@@ -6,3 +6,6 @@ div {
     font-weight : 700;
     top : 0;
 }
+a {
+    font-weight : lighter;
+}
