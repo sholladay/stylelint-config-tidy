@@ -50,3 +50,15 @@ test('word blacklist is case insensitive', async (t) => {
 
     t.is(errors.length, 2);
 });
+
+test('multiline comma separated selector list', async (t) => {
+    const { errored } = await lintText('div,\np {\n    font-size: inherit;\n}\n');
+    t.false(errored);
+});
+
+test('single line comma separated selector list', async (t) => {
+    const { errored, results } = await lintText('div,p {\n    font-size: inherit;\n}\n');
+    t.true(errored);
+    const errors = getErrors(results, 'selector-list-comma-space-after');
+    t.is(errors.length, 1);
+});
