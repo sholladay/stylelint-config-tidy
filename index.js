@@ -34,10 +34,7 @@ module.exports = {
         'color-hex-length'                      : 'short',
         'color-named'                           : 'never',
         'color-no-invalid-hex'                  : true,
-        'comment-empty-line-before'             : ['always', {
-            except : ['first-nested'],
-            ignore : ['stylelint-commands']
-        }],
+        'comment-empty-line-before'             : 'never',
         'comment-no-empty'                                   : true,
         'comment-whitespace-inside'                          : 'always',
         'comment-word-blacklist'                             : ['/^TODO:/i'],
