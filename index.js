@@ -34,7 +34,6 @@ module.exports = {
         'color-hex-length'                                   : 'short',
         'color-named'                                        : 'never',
         'color-no-invalid-hex'                               : true,
-        'comment-empty-line-before'                          : 'never',
         'comment-no-empty'                                   : true,
         'comment-whitespace-inside'                          : 'always',
         'comment-word-blacklist'                             : ['/^TODO:/i'],
