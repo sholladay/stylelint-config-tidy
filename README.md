@@ -1,4 +1,4 @@
-# stylelint-config-tidy [![Build status for stylelint-config-tidy](https://img.shields.io/circleci/project/sholladay/stylelint-config-tidy/master.svg "Build Status")](https://circleci.com/gh/sholladay/stylelint-config-tidy "Builds")
+# stylelint-config-tidy [![Build status for Stylelint Config Tidy](https://travis-ci.com/sholladay/stylelint-config-tidy.svg?branch=master "Build Status")](https://travis-ci.com/sholladay/stylelint-config-tidy "Builds")
 
 > Stylelint [shareable config](https://stylelint.io/user-guide/configuration/) for Tidy style
 
