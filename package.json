@@ -1,60 +1,64 @@
 {
-    "name": "stylelint-config-tidy",
-    "version": "0.8.0",
-    "description": "Stylelint shareable config for Tidy style",
-    "homepage": "https://github.com/sholladay/stylelint-config-tidy",
-    "main": "index.js",
-    "author": {
-        "name": "Seth Holladay",
-        "url": "https://seth-holladay.com",
-        "email": "me@seth-holladay.com"
-    },
-    "scripts": {
-        "test": "xo && ava"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:sholladay/stylelint-config-tidy.git"
-    },
-    "bugs": {
-        "url": "https://github.com/sholladay/stylelint-config-tidy/issues",
-        "email": "me@seth-holladay.com"
-    },
-    "engines": {
-        "node": ">=8"
-    },
-    "license": "MPL-2.0",
-    "files": [
-        "index.js"
-    ],
-    "peerDependencies": {
-        "stylelint": ">=9.8"
-    },
-    "dependencies": {
-        "stylelint-config-recommended": "^2.1.0",
-        "stylelint-config-xo": "^0.12.0",
-        "stylelint-order": "^2.0.0"
-    },
-    "devDependencies": {
-        "ava": "^1.2.1",
-        "eslint-config-tidy": "^0.7.0",
-        "stylelint": "^9.2.1",
-        "xo": "^0.24.0"
-    },
-    "keywords": [
-        "stylelint",
-        "stylelint-config",
-        "clean",
-        "lint",
-        "tidy",
-        "css",
-        "stylesheet",
-        "style",
-        "quality",
-        "check",
-        "errors"
-    ],
-    "xo": {
-        "extend": "tidy"
-    }
+  "name": "stylelint-config-tidy",
+  "version": "0.8.0",
+  "description": "Stylelint shareable config for Tidy style",
+  "homepage": "https://github.com/sholladay/stylelint-config-tidy",
+  "main": "index.js",
+  "author": {
+    "name": "Seth Holladay",
+    "url": "https://seth-holladay.com",
+    "email": "me@seth-holladay.com"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sholladay/stylelint-config-tidy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sholladay/stylelint-config-tidy/issues",
+    "email": "me@seth-holladay.com"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "license": "MPL-2.0",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "stylelint": ">=9.8"
+  },
+  "dependencies": {
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-xo": "^0.12.0",
+    "stylelint-order": "^2.0.0",
+    "snyk": "^1.189.0"
+  },
+  "devDependencies": {
+    "ava": "^1.2.1",
+    "eslint-config-tidy": "^0.7.0",
+    "stylelint": "^9.2.1",
+    "xo": "^0.24.0"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "clean",
+    "lint",
+    "tidy",
+    "css",
+    "stylesheet",
+    "style",
+    "quality",
+    "check",
+    "errors"
+  ],
+  "xo": {
+    "extend": "tidy"
+  },
+  "snyk": true
 }
