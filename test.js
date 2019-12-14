@@ -20,45 +20,54 @@ const lintText = (text) => {
     });
 };
 
-const getErrors = (results, ruleId) => {
-    return results[0].warnings.filter((x) => {
-        return x.rule === ruleId && x.severity === 'error';
+const getRules = (results) => {
+    const ruleIds = results[0].warnings.map((x) => {
+        return x.rule;
     });
+    return [...new Set(ruleIds)];
 };
 
-test('minimum necessary to pass', async (t) => {
-    const { errored } = await lintText('p {\n    color: inherit;\n}\n');
+test('smoke test', async (t) => {
+    const { errored, results } = await lintText('p {\n    color: inherit;\n}\n');
     t.false(errored);
+    t.deepEqual(getRules(results), []);
 });
 
 test('good stylesheet', async (t) => {
-    const { errored } = await lintFile(goodSheet);
+    const { errored, results } = await lintFile(goodSheet);
     t.false(errored);
+    t.deepEqual(getRules(results), []);
 });
 
 test('bad stylesheet', async (t) => {
-    const { errored } = await lintFile(badSheet);
+    const { errored, results } = await lintFile(badSheet);
     t.true(errored);
+    t.deepEqual(getRules(results), [
+        'color-named',
+        'font-weight-notation',
+        'selector-type-no-unknown'
+    ]);
 });
 
 test('word blacklist is case insensitive', async (t) => {
-    const { errored, results } = await lintText('/* TODO: */\n/* todo: */\n');
+    const lowerCase = await lintText('/* todo: */\n');
+    const upperCase = await lintText('/* TODO: */\n');
 
-    t.true(errored);
+    t.true(lowerCase.errored);
+    t.true(upperCase.errored);
 
-    const errors = getErrors(results, 'comment-word-blacklist');
-
-    t.is(errors.length, 2);
+    t.deepEqual(getRules(lowerCase.results), ['comment-word-blacklist']);
+    t.deepEqual(getRules(upperCase.results), ['comment-word-blacklist']);
 });
 
-test('multiline comma separated selector list', async (t) => {
-    const { errored } = await lintText('div,\np {\n    font-size: inherit;\n}\n');
+test('allows multi-line comma separated selector list', async (t) => {
+    const { errored, results } = await lintText('div,\np {\n    font-size: inherit;\n}\n');
     t.false(errored);
+    t.deepEqual(getRules(results), []);
 });
 
-test('single line comma separated selector list', async (t) => {
+test('disallows one-line comma separated selector list', async (t) => {
     const { errored, results } = await lintText('div,p {\n    font-size: inherit;\n}\n');
     t.true(errored);
-    const errors = getErrors(results, 'selector-list-comma-space-after');
-    t.is(errors.length, 1);
+    t.deepEqual(getRules(results), ['selector-list-comma-space-after']);
 });
