@@ -15,21 +15,20 @@ module.exports = {
             except : ['blockless-after-same-name-blockless', 'first-nested'],
             ignore : ['after-comment']
         }],
-        'at-rule-name-space-after'                           : 'always',
-        'block-closing-brace-space-after'                    : 'always-single-line',
-        'block-closing-brace-space-before'                   : 'always-single-line',
-        'block-no-empty'                                     : true,
-        'block-opening-brace-space-after'                    : 'always-single-line',
-        'color-hex-case'                                     : 'upper',
-        'comment-word-blacklist'                             : ['/^TODO:/i'],
-        'custom-property-empty-line-before'                  : 'never',
-        'declaration-block-no-redundant-longhand-properties' : true,
-        'declaration-block-single-line-max-declarations'     : 1,
-        'declaration-colon-space-after'                      : 'always',
+        'at-rule-name-space-after'                       : 'always',
+        'block-closing-brace-space-after'                : 'always-single-line',
+        'block-closing-brace-space-before'               : 'always-single-line',
+        'block-no-empty'                                 : true,
+        'block-opening-brace-space-after'                : 'always-single-line',
+        'color-hex-case'                                 : 'upper',
+        'comment-word-blacklist'                         : ['/^TODO:/i'],
+        'custom-property-empty-line-before'              : 'never',
+        'declaration-block-single-line-max-declarations' : 1,
+        'declaration-colon-space-after'                  : 'always',
         // Disabled because 'always' does not support aligning colons (enforces a single space).
-        'declaration-colon-space-before'                     : null,
-        'font-family-name-quotes'                            : 'always-unless-keyword',
-        'font-weight-notation'                               : ['numeric', {
+        'declaration-colon-space-before'                 : null,
+        'font-family-name-quotes'                        : 'always-unless-keyword',
+        'font-weight-notation'                           : ['numeric', {
             ignore : ['relative']
         }],
         'function-comma-newline-after'         : 'always-multi-line',
@@ -48,7 +47,6 @@ module.exports = {
         'order/properties-alphabetical-order'  : true,
         // Disabled because we use alphabetical order instead.
         'order/properties-order'               : null,
-        'property-no-vendor-prefix'            : true,
         'rule-empty-line-before'               : ['never', {
             ignore : ['after-comment']
         }],
@@ -57,7 +55,6 @@ module.exports = {
         // TODO: This rule seems like a great idea, but not sure what a good value for it is.
         'selector-max-specificity'          : '1,1,0',
         'selector-no-vendor-prefix'         : true,
-        'string-quotes'                     : 'single',
         'time-min-milliseconds'             : 200,
         'value-list-comma-newline-after'    : 'always-multi-line',
         'value-list-comma-space-after'      : 'always',
