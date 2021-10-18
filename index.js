@@ -15,14 +15,17 @@ module.exports = {
             except : ['blockless-after-same-name-blockless', 'first-nested'],
             ignore : ['after-comment']
         }],
-        'at-rule-name-space-after'                       : 'always',
-        'block-closing-brace-space-after'                : 'always-single-line',
-        'block-closing-brace-space-before'               : 'always-single-line',
-        'block-no-empty'                                 : true,
-        'block-opening-brace-space-after'                : 'always-single-line',
-        'color-hex-case'                                 : 'upper',
-        'comment-word-blacklist'                         : ['/^TODO:/i'],
-        'custom-property-empty-line-before'              : 'never',
+        'at-rule-name-space-after'                  : 'always',
+        'block-closing-brace-space-after'           : 'always-single-line',
+        'block-closing-brace-space-before'          : 'always-single-line',
+        'block-no-empty'                            : true,
+        'block-opening-brace-space-after'           : 'always-single-line',
+        'color-hex-case'                            : 'upper',
+        'comment-word-blacklist'                    : ['/^TODO:/i'],
+        'custom-property-empty-line-before'         : 'never',
+        'declaration-block-no-duplicate-properties' : [true, {
+            ignore : ['consecutive-duplicates-with-different-values']
+        }],
         'declaration-block-single-line-max-declarations' : 1,
         'declaration-colon-space-after'                  : 'always',
         // Disabled because 'always' does not support aligning colons (enforces a single space).
@@ -58,6 +61,8 @@ module.exports = {
         'time-min-milliseconds'             : 200,
         'value-list-comma-newline-after'    : 'always-multi-line',
         'value-list-comma-space-after'      : 'always',
-        'value-no-vendor-prefix'            : true
+        'value-no-vendor-prefix'            : [true, {
+            ignoreValues : ['fill-available']
+        }]
     }
 };
