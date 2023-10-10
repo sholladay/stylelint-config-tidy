@@ -21,7 +21,7 @@ module.exports = {
         'block-no-empty'                            : true,
         'block-opening-brace-space-after'           : 'always-single-line',
         'color-hex-case'                            : 'upper',
-        'comment-word-blacklist'                    : ['/^TODO:/i'],
+        'comment-word-disallowed-list'              : ['/^TODO:/i'],
         'custom-property-empty-line-before'         : 'never',
         'declaration-block-no-duplicate-properties' : [true, {
             ignore : ['consecutive-duplicates-with-different-values']
@@ -38,7 +38,7 @@ module.exports = {
         'function-comma-space-after'           : 'always-single-line',
         'function-parentheses-newline-inside'  : 'always-multi-line',
         'function-parentheses-space-inside'    : 'never-single-line',
-        'function-url-scheme-whitelist'        : ['https', 'data'],
+        'function-url-scheme-allowed-list'     : ['https', 'data'],
         indentation                            : 4,
         'max-empty-lines'                      : 1,
         'max-line-length'                      : 100,
