@@ -1,6 +1,6 @@
 {
     "name": "stylelint-config-tidy",
-    "version": "0.9.1",
+    "version": "0.10.0",
     "description": "Stylelint shareable config for Tidy style",
     "homepage": "https://github.com/sholladay/stylelint-config-tidy",
     "main": "index.js",
