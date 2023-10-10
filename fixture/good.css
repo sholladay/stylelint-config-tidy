@@ -2,7 +2,7 @@
 
 div {
     /* skippity to do da */
-    color : hsl(240, 100%, 50%);
+    color : hsl(240deg, 100%, 50%);
     font-weight : 700;
     top : 0;
 }

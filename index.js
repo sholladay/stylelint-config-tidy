@@ -20,6 +20,7 @@ module.exports = {
         'block-closing-brace-space-before'          : 'always-single-line',
         'block-no-empty'                            : true,
         'block-opening-brace-space-after'           : 'always-single-line',
+        'color-function-notation'                   : 'legacy',
         'color-hex-case'                            : 'upper',
         'comment-word-disallowed-list'              : ['/^TODO:/i'],
         'custom-property-empty-line-before'         : 'never',

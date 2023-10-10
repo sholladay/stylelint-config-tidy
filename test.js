@@ -49,13 +49,13 @@ test('bad stylesheet', async (t) => {
     ]);
 });
 
-test('word blacklist is case insensitive', async (t) => {
+test('disallows todos regardless of case', async (t) => {
     const lowerCase = await lintText('/* todo: */\n');
     const upperCase = await lintText('/* TODO: */\n');
     t.true(lowerCase.errored);
     t.true(upperCase.errored);
-    t.deepEqual(getRules(lowerCase.results), ['comment-word-blacklist']);
-    t.deepEqual(getRules(upperCase.results), ['comment-word-blacklist']);
+    t.deepEqual(getRules(lowerCase.results), ['comment-word-disallowed-list']);
+    t.deepEqual(getRules(upperCase.results), ['comment-word-disallowed-list']);
 });
 
 test('allows multi-line comma separated selector list', async (t) => {
