@@ -39,7 +39,7 @@
         "ava": "^2.4.0",
         "eslint-config-tidy": "^0.10.0",
         "stylelint": "^12.0.0",
-        "xo": "^0.25.3"
+        "xo": "^0.56.0"
     },
     "keywords": [
         "stylelint",
@@ -55,6 +55,9 @@
         "errors"
     ],
     "xo": {
-        "extend": "tidy"
+        "extend": "tidy",
+        "rules": {
+            "unicorn/prefer-module": "off"
+        }
     }
 }
