@@ -61,8 +61,6 @@ module.exports = {
         'time-min-milliseconds'             : 200,
         'value-list-comma-newline-after'    : 'always-multi-line',
         'value-list-comma-space-after'      : 'always',
-        'value-no-vendor-prefix'            : [true, {
-            ignoreValues : ['fill-available']
-        }]
+        'value-no-vendor-prefix'            : true
     }
 };
